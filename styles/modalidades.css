@@ -1,93 +1,154 @@
-@import url("../styles/styles.css");
-/* BARRA DE NAVEGAÇÃO - INICIO */
+@import url("./styles.css");
 
-/* MENU HAMBURGUER - INICIO */
-.menu-hamburguer {
-  width: 24px;
-  display: none;
-  margin-left: 10px;
+.title-page {
+  background-color: var(--color-terciary);
+  font-size: 36px;
+  padding: 10px 40px;
+  margin-bottom: 50px;
+  box-shadow: 0 0 5px var(--color-secondary);
+  font-family: var(--font-secondary);
 }
 
-.itens-menu-hamburguer {
-  position: absolute;
-  flex-direction: column;
-  align-items: center;
-  left: 0;
-  font-size: 16px;
-  top: 29px;
-  width: auto;
-  height: auto;
-  z-index: 2;
-  background-color: var(--color-secondary);
-  border-radius: 0 0 5px 0;
-  display: none;
-}
-
-.container-link-menu-hamburguer {
-  margin: 10px;
-}
-
-.link-menu-hamburguer {
-  color: var(--color-primary);
-  font-size: 10px;
-  text-decoration: none;
-}
-
-.active {
-  display: block;
-}
-/* MENU HAMBURGUER - FIM */
-
-.container-header-conteudo {
+/* Parte do BIGBIG eu arrumei sem o felipe as letras */
+.primaria {
+  margin: 100px 0px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: var(--color-secondary);
+  min-height: 100px;
+  color: var(--color-terciary);
 }
 
-.logo {
-  height: 50px;
-  width: 50px;
-}
-
-.logo a img {
-  margin: 5px 0 5px 10px;
-  width: 80%;
-}
-
-.menu {
+.cards {
   display: flex;
-  width: 100%;
-  justify-content: center;
-  padding: 10px;
-  margin-right: 45px;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.nav-bar-link {
+.card {
+  display: flex;
   justify-content: center;
-  text-decoration: none;
-  color: var(--color-primary);
-  padding-right: 30px;
-  font-size: 12px;
+  width: 450px;
+  height: 400px;
   position: relative;
+  background-color: var(--color-primary);
+  border-radius: 20px;
+  box-shadow: 0 5px 10px var(--color-secondary);
+  transition: 2s;
 }
 
-.nav-bar-link::after {
-  content: " ";
-  width: 50px;
-  height: 4px;
-  background-image: linear-gradient(
-    45deg,
-    var(--color-secondary),
-    var(--color-primary)
-  );
+.card:hover {
+  height: 490px;
+  transition: 1s;
+}
+.content #titulo {
+  font-size: 24px;
+  text-align: center;
+  font-family: var(--font-secondary);
+  color: var(--color-red);
+}
+.content #p1 {
+  font-size: 16px;
+  text-align: center;
+  color: var(--color-secondary);
+}
+
+.card .img-box {
   position: absolute;
-  top: 20px;
-  left: 0;
-  transition: width 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: auto;
+  top: 0px;
 }
 
-.nav-bar-link:hover::after {
-  width: 0px;
+.card:hover .img-muay {
+  content: url(../assets/Ativo\ 4.png);
 }
-/* BARRA DE NAVEGAÇÃO - FIM */
+
+.card:hover .img-jiu {
+  content: url(../assets/Ativo\ 2.png);
+}
+.card:hover .img-box {
+  transition: 0.95s;
+}
+
+.card:hover .jiu {
+  top: -140px;
+  scale: 0.5;
+}
+.card:hover .muay {
+  top: -110px;
+  scale: 0.75;
+}
+
+.card:not(:hover) .img-box {
+  transition: 1s;
+}
+
+.card .img-box img {
+  object-fit: cover;
+}
+
+.img-jiu {
+  padding: 50px;
+  width: 90%;
+  height: 100%;
+}
+
+.img-muay {
+  width: 100%;
+  height: 100%;
+}
+
+.card .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  position: absolute;
+  top: 350px;
+  width: 120px;
+  height: 30px;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.card:hover .content {
+  top: 130px;
+  height: 350px;
+  width: 400px;
+}
+
+.button {
+  background-color: var(--color-red);
+  padding: 8px;
+  color: var(--color-primary);
+  border-radius: 8px;
+  text-align: center;
+  border: 0px;
+  text-decoration: none;
+  width: 200px;
+}
+
+.button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 8px var(--color-secondary);
+}
+/* Parte do BIGBIG eu arrumei sem o felipe as letras */
+
+@media screen and (max-width: 900px) {
+  .card {
+    width: 300px;
+  }
+  .card:hover .content {
+    width: 250px;
+  }
+  .content #p1 {
+    font-size: 14px;
+  }
+  .content #titulo {
+    font-size: 18px;
+  }
+}

@@ -1,5 +1,4 @@
 @import url("./styles.css");
-
 /* BARRA DE NAVEGAÇÃO - INICIO */
 
 /* MENU HAMBURGUER - INICIO */
@@ -15,13 +14,17 @@
   align-items: center;
   left: 0;
   font-size: 16px;
-  top: 29px;
+  top: 25px;
   width: auto;
   height: auto;
   z-index: 2;
   background-color: var(--color-secondary);
   border-radius: 0 0 5px 0;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.5s ease, opacity 0.5s ease,
+    visibility 0.9s linear 0.9s;
+  z-index: 1000;
 }
 
 .container-link-menu-hamburguer {
@@ -34,8 +37,11 @@
   text-decoration: none;
 }
 
-.active {
-  display: block;
+.itens-menu-hamburguer.active {
+  transform: translateY(10%);
+  opacity: 1;
+  visibility: visible;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
 /* MENU HAMBURGUER - FIM */
 
@@ -49,6 +55,7 @@
 .logo {
   height: 50px;
   width: 50px;
+  z-index: 1001;
 }
 
 .logo a img {
@@ -69,13 +76,14 @@
   text-decoration: none;
   color: var(--color-primary);
   padding-right: 30px;
-  font-size: 14px;
+  font-size: 18px;
   position: relative;
+  font-family: var(--font-secondary);
 }
 
 .nav-bar-link::after {
   content: " ";
-  width: 50px;
+  width: 0px;
   height: 4px;
   background-image: linear-gradient(
     45deg,
@@ -83,77 +91,15 @@
     var(--color-primary)
   );
   position: absolute;
-  top: 20px;
+  top: 25px;
   left: 0;
   transition: width 0.5s;
 }
 
 .nav-bar-link:hover::after {
-  width: 0px;
+  width: 70px;
 }
 /* BARRA DE NAVEGAÇÃO - FIM */
-
-/* TABELA DE HORÁRIOS - INÍCIO */
-.schedules-page {
-  background-color: var(--color-terciary);
-  font-size: 36px;
-  padding: 10px 40px;
-  margin-bottom: 50px;
-  box-shadow: 0 0 5px var(--color-secondary);
-  font-family: var(--font-secondary);
-}
-
-.table-columns {
-  background-color: #1a1818;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px #f70303;
-  color: white;
-  padding: 0 20px 20px 20px;
-}
-.container-table {
-  padding: 90px 0;
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.table-columns-class {
-  display: flex;
-  font-size: 20px;
-  border-radius: 4px;
-  align-items: center;
-}
-
-.table-columns-itens {
-  display: flex;
-  padding: 10px;
-}
-
-.days {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 30px;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px rgb(248, 3, 3);
-  font-size: 30px;
-  background-color: #000000;
-}
-
-.time {
-  align-items: center;
-}
-.fight {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
-
-/* TABELA DE HORÁRIOS - FIM */
 
 /* BOTÃO WHATS - INICIO */
 .whatsapp {
@@ -171,7 +117,6 @@
 .whatsapp-img:hover {
   opacity: 1;
 }
-
 /* BOTÃO WHATS - FIM */
 
 /* FOOTER - INICIO */
@@ -208,7 +153,7 @@
 .links-acesso-rapido {
   color: var(--color-primary);
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .links-acesso-rapido:hover {
@@ -228,7 +173,7 @@
 
 .infos-visite {
   color: var(--color-primary);
-  font-size: 12px;
+  font-size: 14px;
   display: flex;
   align-items: center;
 }
@@ -250,7 +195,7 @@
 
 .infos-horarios {
   color: var(--color-primary);
-  font-size: 12px;
+  font-size: 14px;
   display: flex;
   align-items: center;
 }
@@ -267,7 +212,6 @@
   padding: 20px;
   font-weight: 500;
 }
-
 /* FOOTER - FIM */
 
 @media screen and (max-width: 900px) {
@@ -275,34 +219,39 @@
   .menu-hamburguer {
     display: block;
   }
-
   /* MENU HAMBURGUER - FIM */
 
   /* BARRA DE NAVEGAÇÃO - INICIO */
   .menu {
     display: none;
   }
-
   /* BARRA DE NAVEGAÇÃO - FIM */
 
   /* LOGO - INICIO */
   .logo {
-    height: 35px;
-    width: 30px;
+    height: 45px;
+    width: 40px;
   }
-
   /* LOGO - FIM */
 }
 
 @media screen and (max-width: 500px) {
-  /* TABELA DE HORÁRIOS - INÍCIO */
-
-  /* TABELA DE HORÁRIOS - FIM */
-
-  /* BOTÃO WHATS - INICIO */
-  .whatsapp-img {
-    width: 36px;
+  /* FOOTER - INICIO */
+  .titulo-horario,
+  .titulo-visite,
+  .titulo-acesso-rapido {
+    font-size: 14px;
   }
-
-  /* BOTÃO WHATS - FIM */
+  .links-acesso-rapido,
+  .info-horario-texto,
+  .infos-visite-texto {
+    font-size: 12px;
+  }
+  .container-direitos {
+    font-size: 12px;
+  }
+  .logo-footer img {
+    width: 70px;
+  }
+  /* FOOTER - FIM */
 }

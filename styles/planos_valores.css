@@ -1,110 +1,18 @@
 @import url("./styles.css");
 
-/* BARRA DE NAVEGAÇÃO - INICIO */
-
-/* MENU HAMBURGUER - INICIO */
-.menu-hamburguer {
-  width: 24px;
-  display: none;
-  margin-left: 10px;
-}
-
-.itens-menu-hamburguer {
-  position: absolute;
-  flex-direction: column;
-  align-items: center;
-  left: 0;
-  font-size: 16px;
-  top: 29px;
-  width: auto;
-  height: auto;
-  z-index: 2;
-  background-color: var(--color-secondary);
-  border-radius: 0 0 5px 0;
-  display: none;
-}
-
-.container-link-menu-hamburguer {
-  margin: 10px;
-}
-
-.link-menu-hamburguer {
-  color: var(--color-primary);
-  font-size: 10px;
-  text-decoration: none;
-}
-
-.active {
-  display: block;
-}
-/* MENU HAMBURGUER - FIM */
-
-.container-header-conteudo {
-  display: flex;
-  align-items: center;
-  box-shadow: 0 5px 10px var(--color-secondary);
-  background-color: var(--color-secondary);
-}
-
-.logo {
-  height: 50px;
-  width: 50px;
-}
-
-.logo a img {
-  margin: 5px 0 5px 10px;
-  width: 80%;
-}
-
-.menu {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  padding: 10px;
-  margin-right: 45px;
-}
-
-.nav-bar-link {
-  justify-content: center;
-  text-decoration: none;
-  color: var(--color-primary);
-  padding-right: 30px;
-  font-size: 14px;
-  position: relative;
-}
-
-.nav-bar-link::after {
-  content: " ";
-  width: 50px;
-  height: 4px;
-  background-image: linear-gradient(
-    45deg,
-    var(--color-secondary),
-    var(--color-primary)
-  );
-  position: absolute;
-  top: 20px;
-  left: 0;
-  transition: width 0.5s;
-}
-
-.nav-bar-link:hover::after {
-  width: 0px;
-}
-/* BARRA DE NAVEGAÇÃO - FIM */
-
 .title-page {
-  font-size: 36px;
-  padding: 20px 40px;
-  margin-bottom: 50px;
   background-color: var(--color-terciary);
-  box-shadow: 0 0px 5px var(--color-secondary);
+  font-size: 36px;
+  padding: 10px 40px;
+  margin-bottom: 50px;
+  box-shadow: 0 0 5px var(--color-secondary);
+  font-family: var(--font-secondary);
 }
 
 .text-page {
   display: flex;
   justify-content: center;
-  font-size: 50px;
+  font-size: 40px;
   padding: 10px 40px;
   margin-bottom: 50px;
 }
@@ -131,6 +39,7 @@
   height: 350px;
   justify-content: center;
   border-radius: 0px 0px 10px 10px;
+  font-weight: 900;
 }
 
 .card-face {
@@ -147,7 +56,7 @@
   transform: perspective(600px) rotateY(0deg);
   box-shadow: 0 5px 10px var(--color-secondary);
   background-image: url("../assets/fundo-planos.png");
-  border: 2px solid var(--color-quartenary);
+  border: 2px solid var(--color-red);
 }
 
 .card-face-text {
@@ -155,7 +64,7 @@
   height: 45px;
   line-height: 45px;
   text-align: center;
-  color: var(--color-quartenary);
+  color: var(--color-red);
   font-size: 36px;
 }
 
@@ -165,7 +74,7 @@
 }
 .text-description-front {
   position: absolute;
-  color: var(--color-quartenary);
+  color: var(--color-red);
   font-size: 20px;
   top: 50%;
 }
@@ -178,22 +87,23 @@
   flex-direction: column;
   text-align: center;
   background-image: url("../assets/fundo-planos.png");
-  border: 2px solid var(--color-quartenary);
+  border: 2px solid var(--color-red);
 }
 
 .card-face-descricao {
-  color: var(--color-quartenary);
+  color: var(--color-red);
   padding: 10px;
   font-size: 20px;
 }
 
 .card-face-link a {
   text-decoration: none;
-  color: var(--color-secondary);
-  background-color: var(--color-quartenary);
+  color: var(--color-primary);
+  background-color: var(--color-red);
   padding: 10px 30px;
   border-radius: 10px;
   font-size: 20px;
+  font-weight: 400;
 }
 
 .card-face-link a:hover {
@@ -209,148 +119,14 @@
   transform: perspective(600px) rotateY(360deg);
 }
 
-/* BOTÃO WHATS - INICIO */
-.whatsapp {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  margin: 0px 10px 10px 0px;
-}
-
-.whatsapp-img {
-  width: 56px;
-  opacity: 0.9;
-}
-
-.whatsapp-img:hover {
-  opacity: 1;
-}
-/* BOTÃO WHATS - FIM */
-
-/* FOOTER - INICIO */
-.container-footer-conteudo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  background-color: var(--color-secondary);
-  margin-top: 50px;
-  gap: 20px;
-  padding: 5px;
-}
-
-.logo-footer {
-  display: flex;
-  align-items: center;
-}
-
-.logo-footer img {
-  width: 100px;
-}
-
-.container-acesso-rapido {
-  display: grid;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.titulo-acesso-rapido {
-  color: var(--color-primary);
-  margin: 20px 0 0 0;
-}
-
-.links-acesso-rapido {
-  color: var(--color-primary);
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.links-acesso-rapido:hover {
-  opacity: 0.5;
-}
-
-.container-visite {
-  display: grid;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.titulo-visite {
-  color: var(--color-primary);
-  margin: 20px 0 0 0;
-}
-
-.infos-visite {
-  color: var(--color-primary);
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-}
-
-.icon-visite {
-  margin-right: 5px;
-}
-
-.container-horarios {
-  display: grid;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.titulo-horario {
-  color: var(--color-primary);
-  margin: 20px 0 0 0;
-}
-
-.infos-horarios {
-  color: var(--color-primary);
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-}
-
-.icon-horario {
-  margin-right: 5px;
-}
-
-.container-direitos {
-  display: flex;
-  font-size: 16px;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  font-weight: 500;
-}
-/* FOOTER - FIM */
-
 @media screen and (max-width: 900px) {
-  /* MENU HAMBURGUER - INICIO */
-  .menu-hamburguer {
-    display: block;
+  .card-face-text {
+    font-size: 32px;
   }
-  /* MENU HAMBURGUER - FIM */
-
-  /* BARRA DE NAVEGAÇÃO - INICIO */
-  .menu {
-    display: none;
+  .text-description-front {
+    font-size: 18px;
   }
-  /* BARRA DE NAVEGAÇÃO - FIM */
-
-  /* LOGO - INICIO */
-  .logo {
-    height: 35px;
-    width: 30px;
-  }
-  /* LOGO - FIM */
-
   .text-page {
     font-size: 30px;
   }
-}
-
-@media screen and (max-width: 500px) {
-  /* BOTÃO WHATS - INICIO */
-  .whatsapp-img {
-    width: 36px;
-  }
-  /* BOTÃO WHATS - FIM */
 }
