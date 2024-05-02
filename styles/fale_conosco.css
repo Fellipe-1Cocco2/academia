@@ -1,0 +1,192 @@
+@import url("./styles.css");
+
+/* BARRA DE NAVEGAÇÃO - INICIO */
+
+/* MENU HAMBURGUER - INICIO */
+.menu-hamburguer {
+    width: 24px;
+    display: none;
+    margin-left: 10px;
+}
+
+.itens-menu-hamburguer {
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    left: 0;
+    font-size: 16px;
+    top: 29px;
+    width: auto;
+    height: auto;
+    z-index: 2;
+    background-color: var(--color-secondary);
+    border-radius: 0 0 5px 0;
+    display: none;
+}
+
+.container-link-menu-hamburguer {
+    margin: 10px;
+}
+
+.link-menu-hamburguer {
+    color: var(--color-primary);
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.active {
+    display: block;
+}
+
+/* MENU HAMBURGUER - FIM */
+
+/* FALE CONOSCO - INÍCIO */
+
+
+.contactus-page {
+    background-color: var(--color-terciary);
+    font-size: 36px;
+    padding: 10px 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 5px var(--color-secondary);
+
+}
+
+/*FORMULÁRIO - INÍCIO */
+.form-img img{
+    width: 300px;
+    
+}
+.title-form {
+
+    
+        margin: auto;
+        width: 600px;
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+        background-color: #050505;
+        color: white;
+}
+
+.formulario{
+   display: flex;
+   
+   border: 1px solid #ccc;
+    border-radius: 1em;
+    margin: auto;
+    width: 600px;
+    padding: 1em;
+    box-shadow: 2px 2px 2px;
+}
+
+
+.campo-form{
+    margin: 10px;
+ 
+}
+
+
+input ,#snumber,#semail,#sname{
+    border-radius: 5px;
+}
+
+input:focus{
+    background: #E0E0F8;
+    }
+
+.planos{
+    display: flex;
+    margin-top: 10px;
+   }
+
+
+.plano1,.plano2,.plano3,.plano4{
+    box-shadow: 2px 2px 2px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+    width: 65px;
+    height: 65px;
+}
+.plano1:hover,.plano2:hover,.plano3:hover,.plano4:hover{
+    color: white;
+    background-color: black;
+}
+.button_form{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button_form button{
+    border-radius: 10px;
+    width: 70px;
+}
+
+button:hover{
+    color: white;
+    background-color: black;
+}
+
+
+/*FORMULÁRIO - FIM */
+
+/* FALE CONOSCO - FIM */
+
+
+
+.container-header-conteudo {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: var(--color-secondary);
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+.logo a img {
+    margin: 5px 0 5px 10px;
+    width: 80%;
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    margin-right: 45px;
+}
+
+.nav-bar-link {
+    justify-content: center;
+    text-decoration: none;
+    color: var(--color-primary);
+    padding-right: 30px;
+    font-size: 12px;
+    position: relative;
+}
+
+.nav-bar-link::after {
+    content: " ";
+    width: 50px;
+    height: 4px;
+    background-image: linear-gradient(45deg,
+            var(--color-secondary),
+            var(--color-primary));
+    position: absolute;
+    top: 20px;
+    left: 0;
+    transition: width 0.5s;
+}
+
+
+.nav-bar-link:hover::after {
+    width: 0px;
+}
+
+/* BARRA DE NAVEGAÇÃO - FIM */
+
