@@ -1,0 +1,306 @@
+@import url("./styles.css");
+
+/* BARRA DE NAVEGAÇÃO - INICIO */
+
+/* MENU HAMBURGUER - INICIO */
+.menu-hamburguer {
+  width: 24px;
+  display: none;
+  margin-left: 10px;
+}
+
+.itens-menu-hamburguer {
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  left: 0;
+  font-size: 16px;
+  top: 29px;
+  width: auto;
+  height: auto;
+  z-index: 2;
+  background-color: var(--color-secondary);
+  border-radius: 0 0 5px 0;
+  display: none;
+}
+
+.container-link-menu-hamburguer {
+  margin: 10px;
+}
+
+.link-menu-hamburguer {
+  color: var(--color-primary);
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.active {
+  display: block;
+}
+/* MENU HAMBURGUER - FIM */
+
+.container-header-conteudo {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 5px 10px var(--color-secondary);
+  background-color: var(--color-secondary);
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+.logo a img {
+  margin: 5px 0 5px 10px;
+  width: 80%;
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+  margin-right: 45px;
+}
+
+.nav-bar-link {
+  justify-content: center;
+  text-decoration: none;
+  color: var(--color-primary);
+  padding-right: 30px;
+  font-size: 14px;
+  position: relative;
+}
+
+.nav-bar-link::after {
+  content: " ";
+  width: 50px;
+  height: 4px;
+  background-image: linear-gradient(
+    45deg,
+    var(--color-secondary),
+    var(--color-primary)
+  );
+  position: absolute;
+  top: 20px;
+  left: 0;
+  transition: width 0.5s;
+}
+
+.nav-bar-link:hover::after {
+  width: 0px;
+}
+/* BARRA DE NAVEGAÇÃO - FIM */
+
+/* TABELA DE HORÁRIOS - INÍCIO */
+.schedules-page {
+  background-color: var(--color-terciary);
+  font-size: 36px;
+  padding: 10px 40px;
+  margin-bottom: 50px;
+  box-shadow: 0 0 5px var(--color-secondary);
+}
+.table-columns {
+  background-color: #1a1818;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #f70303;
+  color: white;
+  padding: 0 20px 20px 20px;
+}
+.container-table {
+  padding: 90px 0;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.table-columns-class {
+  display: flex;
+  font-size: 20px;
+  border-radius: 4px;
+  align-items: center;
+}
+
+.table-columns-itens {
+  display: flex;
+  padding: 10px;
+}
+
+.days {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgb(248, 3, 3);
+  font-size: 30px;
+  background-color: #000000;
+}
+
+.time {
+  align-items: center;
+}
+.fight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* TABELA DE HORÁRIOS - FIM */
+
+/* BOTÃO WHATS - INICIO */
+.whatsapp {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0px 10px 10px 0px;
+}
+
+.whatsapp-img {
+  width: 56px;
+  opacity: 0.9;
+}
+
+.whatsapp-img:hover {
+  opacity: 1;
+}
+
+/* BOTÃO WHATS - FIM */
+
+/* FOOTER - INICIO */
+.container-footer-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--color-secondary);
+  margin-top: 50px;
+  gap: 20px;
+  padding: 5px;
+}
+
+.logo-footer {
+  display: flex;
+  align-items: center;
+}
+
+.logo-footer img {
+  width: 100px;
+}
+
+.container-acesso-rapido {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.titulo-acesso-rapido {
+  color: var(--color-primary);
+  margin: 20px 0 0 0;
+}
+
+.links-acesso-rapido {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.links-acesso-rapido:hover {
+  opacity: 0.5;
+}
+
+.container-visite {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.titulo-visite {
+  color: var(--color-primary);
+  margin: 20px 0 0 0;
+}
+
+.infos-visite {
+  color: var(--color-primary);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.icon-visite {
+  margin-right: 5px;
+}
+
+.container-horarios {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.titulo-horario {
+  color: var(--color-primary);
+  margin: 20px 0 0 0;
+}
+
+.infos-horarios {
+  color: var(--color-primary);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.icon-horario {
+  margin-right: 5px;
+}
+
+.container-direitos {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-weight: 500;
+}
+
+/* FOOTER - FIM */
+
+@media screen and (max-width: 900px) {
+  /* MENU HAMBURGUER - INICIO */
+  .menu-hamburguer {
+    display: block;
+  }
+
+  /* MENU HAMBURGUER - FIM */
+
+  /* BARRA DE NAVEGAÇÃO - INICIO */
+  .menu {
+    display: none;
+  }
+
+  /* BARRA DE NAVEGAÇÃO - FIM */
+
+  /* LOGO - INICIO */
+  .logo {
+    height: 35px;
+    width: 30px;
+  }
+
+  /* LOGO - FIM */
+}
+
+@media screen and (max-width: 500px) {
+  /* TABELA DE HORÁRIOS - INÍCIO */
+
+  /* TABELA DE HORÁRIOS - FIM */
+
+  /* BOTÃO WHATS - INICIO */
+  .whatsapp-img {
+    width: 36px;
+  }
+
+  /* BOTÃO WHATS - FIM */
+}

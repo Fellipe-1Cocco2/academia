@@ -1,0 +1,390 @@
+@import url("./styles.css");
+
+/* BARRA DE NAVEGAÇÃO - INICIO */
+
+/* MENU HAMBURGUER - INICIO */
+.menu-hamburguer {
+  width: 24px;
+  display: none;
+  margin-left: 10px;
+}
+
+.itens-menu-hamburguer {
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  left: 0;
+  font-size: 16px;
+  top: 44px;
+  width: auto;
+  height: auto;
+  z-index: 2;
+  background-color: var(--color-secondary);
+  border-radius: 0 0 5px 0;
+  display: none;
+}
+
+.container-link-menu-hamburguer {
+  margin: 10px;
+}
+
+.link-menu-hamburguer {
+  color: var(--color-primary);
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.active {
+  display: block;
+}
+/* MENU HAMBURGUER - FIM */
+
+.container-header-conteudo {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 5px 10px var(--color-secondary);
+  background-color: var(--color-secondary);
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+.logo a img {
+  margin: 5px 0 5px 10px;
+  width: 80%;
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+  margin-right: 45px;
+}
+
+.nav-bar-link {
+  justify-content: center;
+  text-decoration: none;
+  color: var(--color-primary);
+  padding-right: 30px;
+  font-size: 18px;
+  position: relative;
+  font-family: var(--font-secondary);
+}
+
+.nav-bar-link::after {
+  content: " ";
+  width: 0px;
+  height: 4px;
+  background-image: linear-gradient(
+    45deg,
+    var(--color-secondary),
+    var(--color-primary)
+  );
+  position: absolute;
+  top: 25px;
+  left: 0;
+  transition: width 0.5s;
+}
+
+.nav-bar-link:hover::after {
+  width: 70px;
+}
+/* BARRA DE NAVEGAÇÃO - FIM */
+
+/* SESSÃO 1 - INICIO */
+.container-principal {
+  display: grid;
+  align-items: center;
+}
+
+.container-conteudo {
+  display: flex;
+}
+
+.image {
+  width: 100%;
+  height: 80%;
+  z-index: 0;
+  opacity: 0.7;
+}
+/* SESSÃO 1 - FIM */
+
+/* SESSÃO 2 - INICIO */
+.container-conheca {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  align-items: center;
+}
+
+.conheca-texto {
+  padding: 5px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.conheca-link {
+  background-color: var(--color-secondary);
+  padding: 10px;
+  text-align: center;
+  width: 150px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.conheca-link a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-size: 14px;
+  padding: 5px;
+}
+
+.conheca-link:hover {
+  opacity: 0.8;
+  transition: 0.5s ease-in;
+}
+/* SESSÃO 2 - FIM */
+
+/* SESSÃO 3 - INICIO */
+.container-modalidades-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: var(--color-primary);
+  font-size: 24px;
+  background-color: var(--color-secondary);
+  margin-bottom: 50px;
+}
+
+.container-modalidades-conteudo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.modalidades-img {
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+  font-size: 40px;
+  color: var(--color-primary);
+  text-decoration: none;
+  box-shadow: 0 5px 10px var(--color-secondary);
+  opacity: 0.8;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: var(--font-secondary);
+}
+
+.modalidades-img:hover {
+  opacity: 1;
+  transition: 1s;
+}
+
+.jiu-jitsu {
+  background-image: url(../assets/jiu_jitsu.png);
+}
+
+.muaythai {
+  background-image: url(../assets/muaythai.png);
+}
+/* SESSÃO 3 - FIM */
+
+/* BOTÃO WHATS - INICIO */
+.whatsapp {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0px 10px 10px 0px;
+}
+
+.whatsapp-img {
+  width: 56px;
+  opacity: 0.9;
+}
+
+.whatsapp-img:hover {
+  opacity: 1;
+}
+/* BOTÃO WHATS - FIM */
+
+/* FOOTER - INICIO */
+.container-footer-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--color-secondary);
+  margin-top: 50px;
+  gap: 20px;
+  padding: 5px;
+}
+
+.logo-footer {
+  display: flex;
+  align-items: center;
+}
+
+.logo-footer img {
+  width: 100px;
+}
+
+.container-acesso-rapido {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.titulo-acesso-rapido {
+  color: var(--color-primary);
+  margin: 20px 0 0 0;
+}
+
+.links-acesso-rapido {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.links-acesso-rapido:hover {
+  opacity: 0.5;
+}
+
+.container-visite {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.titulo-visite {
+  color: var(--color-primary);
+  margin: 20px 0 0 0;
+}
+
+.infos-visite {
+  color: var(--color-primary);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.icon-visite {
+  margin-right: 5px;
+}
+
+.container-horarios {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.titulo-horario {
+  color: var(--color-primary);
+  margin: 20px 0 0 0;
+}
+
+.infos-horarios {
+  color: var(--color-primary);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.icon-horario {
+  margin-right: 5px;
+}
+
+.container-direitos {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-weight: 500;
+}
+/* FOOTER - FIM */
+
+@media screen and (max-width: 900px) {
+  /* MENU HAMBURGUER - INICIO */
+  .menu-hamburguer {
+    display: block;
+  }
+  /* MENU HAMBURGUER - FIM */
+
+  /* BARRA DE NAVEGAÇÃO - INICIO */
+  .menu {
+    display: none;
+  }
+  /* BARRA DE NAVEGAÇÃO - FIM */
+
+  /* LOGO - INICIO */
+  .logo {
+    height: 45px;
+    width: 40px;
+  }
+  /* LOGO - FIM */
+}
+.modalidades-img {
+  margin: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  /* SESSÃO 2 - INICIO */
+  .conheca-texto {
+    font-size: 12px;
+  }
+
+  .conheca-link {
+    width: 100px;
+  }
+
+  .conheca-link a {
+    font-size: 10px;
+    padding: 2px;
+  }
+  /* SESSÃO 2 - FIM */
+
+  /* SESSÃO 3 - INICIO */
+  .container-modalidades-titulo {
+    font-size: 16px;
+  }
+  .modalidades-img {
+    width: 220px;
+    height: 150px;
+    font-size: 20px;
+    margin: 20px;
+  }
+  .container-modalidades-conteudo {
+    gap: 10px;
+  }
+  /* SESSÃO 3 - FIM */
+
+  /* BOTÃO WHATS - INICIO */
+  .whatsapp-img {
+    width: 36px;
+  }
+  /* BOTÃO WHATS - FIM */
+}
+.titulo-horario,
+.titulo-visite,
+.titulo-acesso-rapido {
+  font-size: 14px;
+}
+.links-acesso-rapido,
+.info-horario-texto,
+.infos-visite-texto {
+  font-size: 12px;
+}
+.container-direitos {
+  font-size: 12px;
+}
+.logo-footer img {
+  width: 70px;
+}

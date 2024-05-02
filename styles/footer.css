@@ -1,0 +1,117 @@
+/* FOOTER - INICIO */
+.container-footer-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--color-secondary);
+  margin-top: 50px;
+  gap: 20px;
+  padding: 5px;
+}
+
+.logo-footer {
+  display: flex;
+  align-items: center;
+}
+
+.logo-footer img {
+  width: 100px;
+}
+
+.container-acesso-rapido {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.titulo-acesso-rapido {
+  color: var(--color-primary);
+  margin: 20px 0 0 0;
+}
+
+.links-acesso-rapido {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.links-acesso-rapido:hover {
+  opacity: 0.5;
+}
+
+.container-visite {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.titulo-visite {
+  color: var(--color-primary);
+  margin: 20px 0 0 0;
+}
+
+.infos-visite {
+  color: var(--color-primary);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.icon-visite {
+  margin-right: 5px;
+}
+
+.container-horarios {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.titulo-horario {
+  color: var(--color-primary);
+  margin: 20px 0 0 0;
+}
+
+.infos-horarios {
+  color: var(--color-primary);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.icon-horario {
+  margin-right: 5px;
+}
+
+.container-direitos {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-weight: 500;
+}
+/* FOOTER - FIM */
+
+.modalidades-img {
+  margin: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .titulo-horario,
+  .titulo-visite,
+  .titulo-acesso-rapido {
+    font-size: 14px;
+  }
+  .links-acesso-rapido,
+  .info-horario-texto,
+  .infos-visite-texto {
+    font-size: 12px;
+  }
+  .container-direitos {
+    font-size: 12px;
+  }
+  .logo-footer img {
+    width: 70px;
+  }
+}
