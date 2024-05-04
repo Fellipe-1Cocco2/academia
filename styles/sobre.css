@@ -1,10 +1,281 @@
 @import url("./styles.css");
+/* BARRA DE NAVEGAÇÃO - INICIO */
 
-.title-page {
-  background-color: var(--color-terciary);
-  font-size: 36px;
-  padding: 10px 40px;
-  margin-bottom: 50px;
-  box-shadow: 0 0 5px var(--color-secondary);
-  font-family: var(--font-secondary);
+/* MENU HAMBURGUER - INICIO */
+.menu-hamburguer {
+  width: 24px;
+  display: none;
+  margin-left: 10px;
+}
+
+.itens-menu-hamburguer {
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  left: 0;
+  font-size: 16px;
+  top: 29px;
+  width: auto;
+  height: auto;
+  z-index: 2;
+  background-color: var(--color-secondary);
+  border-radius: 0 0 5px 0;
+  display: none;
+}
+
+.container-link-menu-hamburguer {
+  margin: 10px;
+}
+
+.link-menu-hamburguer {
+  color: var(--color-primary);
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.active {
+  display: block;
+}
+
+/* MENU HAMBURGUER - FIM */
+
+.container-header-conteudo {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: var(--color-secondary);
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+.logo a img {
+  margin: 5px 0 5px 10px;
+  width: 80%;
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+  margin-right: 45px;
+}
+
+.nav-bar-link {
+  justify-content: center;
+  text-decoration: none;
+  color: var(--color-primary);
+  padding-right: 30px;
+  font-size: 12px;
+  position: relative;
+}
+
+.nav-bar-link::after {
+  content: " ";
+  width: 50px;
+  height: 4px;
+  background-image: linear-gradient(45deg,
+      var(--color-secondary),
+      var(--color-primary));
+  position: absolute;
+  top: 20px;
+  left: 0;
+  transition: width 0.5s;
+}
+
+.nav-bar-link:hover::after {
+  width: 0px;
+}
+
+/* BARRA DE NAVEGAÇÃO - FIM */
+
+
+
+/* SOBRE ATEAMJJ - INÍCIO */
+
+.sobre {
+  justify-content: center;
+  display: flex;
+  margin: 0 20px 0 20px;
+}
+
+.sobre-title h1 {
+  text-decoration: underline;
+  font-size: 40px;
+  text-align: center;
+  padding: 10px 0px 30px 0px;
+}
+
+.sobre-img {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-left: 0;
+  box-shadow: 2px 2px 2px;
+  background-color: rgb(228, 226, 226);
+  border-radius: 0 20px 20px 0;
+
+}
+
+.sobre-img img {
+  margin-top: 45px;
+
+}
+
+.sobre-texto {
+  border: 1px solid #ccc;
+  border-right: 0;
+  padding: 15px;
+  font-size: 25px;
+  box-shadow: 2px 2px 2px;
+  width: 800px;
+  text-align: start;
+  background-color: rgb(228, 226, 226);
+  border-radius: 20px 0 0 20px;
+  margin-top: 20px;
+  margin-right: 0px;
+}
+
+
+/* SOBRE ATEAMJJ - FIM */
+
+/* BOTÃO WHATS - INICIO */
+.whatsapp {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0px 10px 10px 0px;
+}
+
+.whatsapp-img {
+  width: 56px;
+  opacity: 0.9;
+}
+
+.whatsapp-img:hover {
+  opacity: 1;
+}
+
+/* BOTÃO WHATS - FIM */
+
+/* FOOTER - INICIO */
+.container-footer-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--color-secondary);
+  margin-top: 50px;
+  gap: 20px;
+  padding: 5px;
+}
+
+.logo-footer {
+  display: flex;
+  align-items: center;
+}
+
+.logo-footer img {
+  width: 100px;
+}
+
+.container-acesso-rapido {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.titulo-acesso-rapido {
+  color: var(--color-primary);
+  margin: 20px 0 0 0;
+}
+
+.links-acesso-rapido {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.links-acesso-rapido:hover {
+  opacity: 0.5;
+}
+
+.container-visite {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.titulo-visite {
+  color: var(--color-primary);
+  margin: 20px 0 0 0;
+}
+
+.infos-visite {
+  color: var(--color-primary);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.icon-visite {
+  margin-right: 5px;
+}
+
+.container-horarios {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.titulo-horario {
+  color: var(--color-primary);
+  margin: 20px 0 0 0;
+}
+
+.infos-horarios {
+  color: var(--color-primary);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.icon-horario {
+  margin-right: 5px;
+}
+
+.container-direitos {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-weight: 500;
+}
+
+/* FOOTER - FIM */
+
+@media screen and (max-width: 900px) {
+
+  /* MENU HAMBURGUER - INICIO */
+  .menu-hamburguer {
+    display: block;
+  }
+
+  /* MENU HAMBURGUER - FIM */
+
+  /* BARRA DE NAVEGAÇÃO - INICIO */
+  .menu {
+    display: none;
+  }
+
+  /* BARRA DE NAVEGAÇÃO - FIM */
+  /* LOGO - INICIO */
+  .logo {
+    height: 35px;
+    width: 30px;
+  }
+
+  /* LOGO - FIM */
 }

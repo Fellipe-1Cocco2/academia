@@ -1,6 +1,11 @@
 @import url("./styles.css");
 
-/* FALE CONOSCO - INÍCIO */
+.container-faleconosco {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
 
 .contactus-page {
   background-color: var(--color-terciary);
@@ -11,85 +16,118 @@
   font-family: var(--font-secondary);
 }
 
-/*FORMULÁRIO - INÍCIO */
-.form-img img {
-  width: 300px;
-}
-.title-form {
-  margin: auto;
-  width: 600px;
-  padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 1em;
-  background-color: #050505;
-  color: white;
-}
-
-.formulario {
+.form form {
+  height: auto;
   display: flex;
-
-  border: 1px solid #ccc;
-  border-radius: 1em;
-  margin: auto;
-  width: 600px;
-  padding: 1em;
-  box-shadow: 2px 2px 2px;
-}
-
-.campo-form {
-  margin: 10px;
-}
-
-input,
-#snumber,
-#semail,
-#sname {
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
   border-radius: 5px;
+  box-shadow: 1px 1px 6px #0000001c;
 }
 
-input:focus {
-  background: #e0e0f8;
-}
-
-.planos {
+.form-header {
   display: flex;
-  margin-top: 10px;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.plano1,
-.plano2,
-.plano3,
-.plano4 {
-  box-shadow: 2px 2px 2px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-left: 10px;
-  width: 65px;
-  height: 65px;
+.form-header h2 {
+  font-size: 20px;
 }
-.plano1:hover,
-.plano2:hover,
-.plano3:hover,
-.plano4:hover {
-  color: white;
-  background-color: black;
+
+.form-header h2::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 0.3rem;
+  background-color: var(--color-secondary);
+  margin: 3px auto;
+  position: absolute;
+  border-radius: 10px;
 }
-.button_form {
+
+.span-required {
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--color-red);
+  display: none;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box input {
+  margin: 0.6rem 0;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input-box input:hover {
+  background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+  outline: 1px solid var(--color-terciary);
+}
+
+.plans-title h6,
+.input-box label {
+  font-size: 14px;
+}
+
+.plans-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.plan-input {
+  display: flex;
+  align-items: center;
+}
+
+.plan-input input {
+  margin: 0 0.35rem 0 0;
+}
+
+.plan-input label {
+  font-size: 12px;
+}
+
+.plans-group {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.continue-button {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
 
-.button_form button {
-  border-radius: 10px;
-  width: 70px;
+.continue-button button {
+  width: 60%;
+  border: none;
+  background-color: var(--color-secondary);
+  padding: 0.62rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--color-primary);
 }
 
-button:hover {
-  color: white;
-  background-color: black;
+.continue-button button:hover {
+  background-color: #000000e0;
 }
-
-/*FORMULÁRIO - FIM */
-
-/* FALE CONOSCO - FIM */

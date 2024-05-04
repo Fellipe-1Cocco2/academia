@@ -1,93 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" class="icon-shortcut" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/fale_conosco.css" />
+    <link rel="stylesheet" href="../styles/elementos.css" />
+    <script src="../scripts/scripts.js" defer></script>
+    <script src="../scripts/form.js" defer></script>
+    <title>Fale Conosco - ATEAMJJ</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" class="icon-shortcut" type="image/x-icon" />
-  <link rel="stylesheet" href="../styles/reset.css">
-  <link rel="stylesheet" href="../styles/fale_conosco.css">
-  <link rel="stylesheet" href="../styles/elementos.css" />
-  <script src="../scripts/scripts.js" defer></script>
-  <title>Fale Conosco - ATEAMJJ</title>
-</head>
-
-<body>
-  <header id="cabecalho" class="container-header"></header>
-  <!--/* FALE CONOSCO - INÍCIO */-->
-  <h1 class="contactus-page">Fale Conosco</h1>
-  <div class="title-form">
-    <h2> FORMULÁRIO DE CONTATO </h2>
-  </div>
-  <div class="formulario">
-    <div class="form-img">
-      <img src="../assets/LUIZ.png">
-    </div>
-    <form class="container-form">
-      <fieldset class="grupo">
-        <div class="campo-form">
-          <div class="label-erro">
-            <label for="sname"><strong>Nome:</strong></label>
-            <div class="erro-ativo">Obrigatório</div>
-          </div>
-          <input type="text" placeholder="Digite seu nome " size="35" maxlength="35" id="sname" name="cname" required>
-        </div>
-
-        <div class="campo-form">
-          <div class="label-erro">
-            <label for="semail"><strong>E-mail:</strong></label>
-            <div class="erro-ativo">Obrigatório</div>
-          </div>
-          <input type="email" placeholder="Digite seu e-mail" size="35" maxlength="35" id="semail" name="cemail"
-            required>
-        </div>
-
-        <div class="campo-form">
-          <div class="label-erro">
-            <label for="snumber"><strong>Celular:</strong></label>
-            <div class="erro-ativo">Obrigatório</div>
-          </div>
-          <input type="tel" placeholder="Digite seu celular" size="11" maxlength="11" id="snumber" name="cnumber"
-            required>
-        </div>
-
-        <div class="label-erro">
-          <div class="erro-ativo">Obrigatório</div>
-          <label>Qual plano você gostaria?</label>
-          <br>
-          <div class="planos">
-            <div class="plano1">
-              <label>
-                <input type="radio" name="plano" value="Plano1">Plano 1 <br> <p>luta do mal</p>
-              </label>
+  <body>
+    <header id="cabecalho" class="container-header"></header>
+    <!--/* FALE CONOSCO - INÍCIO */-->
+    <h1 class="contactus-page">Fale Conosco</h1>
+    <section class="container-faleconosco">
+      <div class="form">
+        <form action="#" id="form">
+          <div class="form-header">
+            <div class="title-form">
+              <h2 class="titulo-formulario">Mande uma mensagem</h2>
             </div>
-            <div class="plano2">
-              <label>
-                <input type="radio" name="plano" value="Plano2">Plano 2 <br> <p>até sangrar</p>
-              </label>
-            </div>
-            <div class="plano3">
-              <label>
-                <input type="radio" name="plano" value="Plano3">Plano 3 <br> <p>tapa na cara</p>
-              </label>
-            </div>
-            <div class="plano4">
-              <label>
-                <input type="radio" name="plano" value="Plano4">Plano 4 <br> <p>na covardia</p>
-              </label>
+            <div class="input-group">
+              <div class="input-box">
+                <label for="name">Nome</label>
+                <span class="span-required"
+                  >Deve conter no mínimo 3 caracteres</span
+                >
+                <input
+                  class="required"
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="Digite seu nome"
+                  oninput="nameValidate()"
+                />
+              </div>
+              <div class="input-box">
+                <label for="email">E-mail</label>
+                <span class="span-required">E-mail inválido</span>
+                <input
+                  class="required"
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="Digite seu e-mail"
+                  oninput="emailValidate()"
+                />
+              </div>
+              <div class="input-box">
+                <label for="number">Celular</label>
+                <span class="span-required">Telefone inválido</span>
+                <input
+                  class="required"
+                  id="number"
+                  type="tel"
+                  name="number"
+                  placeholder="xx xxxx xxxx (Digite somente números)"
+                  oninput="telefoneValidate()"
+                />
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="button_form">
-          <button type="submit">Enviar</button>
-        </div>
-      </fieldset>
-  </div>
-  </form>
-  <!--/* FALE CONOSCO - FIM*/-->
-  <div id="whats" class="whatsapp"></div>
-  <footer id="footer" class="container-footer"></footer>
-</body>
-
+          <div class="plans-inputs">
+            <div class="plans-title">
+              <h6>Plano que deseja</h6>
+              <span class="span-required">Selecione um</span>
+            </div>
+            <div class="plans-group">
+              <div class="plan-input">
+                <input type="radio" class="radio-btns" value="Plano 1" />
+                <label for="plano1">Plano 1</label>
+              </div>
+              <div class="plan-input">
+                <input type="radio" class="radio-btns" value="Plano 2" />
+                <label for="plano2">Plano 2</label>
+              </div>
+              <div class="plan-input">
+                <input type="radio" class="radio-btns" value="Plano 3" />
+                <label for="plano3">Plano 3</label>
+              </div>
+              <div class="plan-input">
+                <input type="radio" class="radio-btns" value="Plano 4" />
+                <label for="plano3">Plano 4</label>
+              </div>
+              <div class="plan-input">
+                <input type="radio" class="radio-btns" value="não decidiu" />
+                <label for="naosei">Não me decidi</label>
+              </div>
+            </div>
+          </div>
+          <div class="continue-button">
+            <button>Enviar</button>
+          </div>
+        </form>
+      </div>
+      <div class="redes-sociais">
+        <div>redes sociais</div>
+        <div>redes sociais</div>
+        <div>redes sociais</div>
+      </div>
+    </section>
+    <!--/* FALE CONOSCO - FIM*/-->
+    <div id="whats" class="whatsapp"></div>
+    <footer id="footer" class="container-footer"></footer>
+  </body>
 </html>

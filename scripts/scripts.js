@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((response) => response.text())
     .then((html) => {
       document.getElementById("cabecalho").innerHTML = html;
-      executeFooterScript();
+      executeCabecalhoScript();
     })
     .catch((error) => console.error("Erro ao carregar o rodapé:", error));
 });
@@ -42,7 +42,7 @@ if (
 }
 
 // Ativa e desativa menu Hamburguer
-function executeFooterScript() {
+function executeCabecalhoScript() {
   const imagemMenuHamburguer = document.querySelector(".img-menu-hamburguer");
   const menuHamburguer = document.querySelector(".itens-menu-hamburguer");
 
