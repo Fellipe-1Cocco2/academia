@@ -5,6 +5,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 20px;
+  gap: 50px;
 }
 
 .contactus-page {
@@ -130,4 +131,73 @@
 
 .continue-button button:hover {
   background-color: #000000e0;
+}
+
+.canal-atendimento,
+.canais-atendimento {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.titulo-canais-atendimento {
+  font-size: 20px;
+}
+
+.titulo-canais-atendimento::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 0.3rem;
+  background-color: var(--color-secondary);
+  margin: 3px auto;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.icone-canal-atendimento,
+.redes-icone {
+  width: 40px;
+}
+
+.titulo-canal-atendimento {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  gap: 10px;
+}
+
+.canais-atendimento-conteudo {
+  display: flex;
+  flex-direction: column;
+}
+
+.descricao-canal-atendimento {
+  font-size: 14px;
+  margin-left: 50px;
+  color: var(--color-cinza);
+}
+
+.redes-sociais-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.redes-sociais a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }

@@ -213,6 +213,19 @@
   padding: 20px;
   font-weight: 500;
 }
+
+.links-acesso-rapido,
+.info-horario-texto,
+.infos-visite-texto {
+  font-size: 12px;
+}
+
+.titulo-horario,
+.titulo-visite,
+.titulo-acesso-rapido {
+  font-size: 14px;
+}
+
 /* FOOTER - FIM */
 
 @media screen and (max-width: 900px) {
@@ -238,16 +251,7 @@
 
 @media screen and (max-width: 500px) {
   /* FOOTER - INICIO */
-  .titulo-horario,
-  .titulo-visite,
-  .titulo-acesso-rapido {
-    font-size: 14px;
-  }
-  .links-acesso-rapido,
-  .info-horario-texto,
-  .infos-visite-texto {
-    font-size: 12px;
-  }
+
   .container-direitos {
     font-size: 12px;
   }
